@@ -1,1 +1,122 @@
-c:\Users\Belfleur\Documents\fich.docx
+Institut de Technologies Appliqués des Cayes (ITAC)
+20, rue Toussaint Louverture, les Cayes, Haïti
+Mail : itacinstitut@gmailgmail.com
+Tel : (509) 4499-6032 /4226-7878
+
+
+
+
+
+Sciences informatique
+2023-2024
+
+
+
+
+Préparé par : Samuel Nervens      ALADIN
+                        Quimby                   BELFLEUR
+                        Mardoché                FAUSTIN 
+                         Donal                     CHERY
+                        Berlie kerry            JOSEPH
+                        Rebecca                  MOISE
+
+
+Matière : Program open
+
+Professeur : LOUIS-JEAN Phawens 
+
+
+
+
+
+
+                                                                                                                                                      ¬¬           
+JUIN 2024
+	PLAN
+I.	Quelle est la différence entre cloner ou forker un projet (Avantages et inconvénients)
+II.	 Quelles sont les 2 commandes à exécuter sur un fichier dans un projet git avant de l’envoyer sur un dépôt distant ?
+III.	Quelle commande qu’on doit obligatoirement exécuter après avoir créé un projet git en local pour que ce projet soit reconnu en tant qu’un projet git ?
+IV.	Un fichier dans un projet git est connu dans combien état ? Citez-les.
+V.	Créer une branche dans le projet contenant un fichier .txt dans lequel vous allez répondre à ces questions. Envoyer cette branche sur le dépôt distant sans lui fusionner avec la branche principale.
+
+
+
+
+
+
+1) Quelle est la différence entre cloner ou forker un projet (Avantages et inconvénients)
+La différence entre cloner et forker un projet réside principalement dans leur usage et les implications pour le développement de projets collaboratifs sur des plateformes comme GitHub.
+Cloner un projet
+Cloner un projet signifie copier un dépôt Git existant sur votre machine locale. Lorsque vous clonez un projet, vous obtenez une copie de tous les fichiers, branches, commits et historiques du dépôt à un moment donné.
+Avantages:
+Travail Local : Vous pouvez travailler localement sur le projet, effectuer des modifications, tester des fonctionnalités, etc.
+Accès Complet : Vous avez accès à tout l'historique des commits et aux différentes branches du dépôt original.
+Synchronisation : Vous pouvez facilement synchroniser votre dépôt local avec le dépôt original en utilisant des commandes Git (pull, push, fetch).
+Inconvenient:
+Pas de Contribution Directe : Les changements que vous apportez localement ne peuvent pas être fusionnés directement dans le dépôt d'origine à moins que vous ayez les autorisations nécessaires.
+Dépendance: Vous dépendez toujours du dépôt original pour les mises à jour et les contributions.
+Forker un projet
+Forker un projet signifie créer une copie personnelle d'un dépôt Git sur une plateforme comme GitHub. Cette copie est un nouveau dépôt qui vous appartient, mais qui conserve un lien vers le dépôt original.
+Avantages:
+Autonomie: Vous avez un contrôle total sur votre fork. Vous pouvez apporter des modifications et développer de nouvelles fonctionnalités sans affecter le dépôt d'origine.
+Contributions Faciles: Vous pouvez contribuer au projet original en créant des pull requests à partir de votre fork. Cela facilite la collaboration et la soumission de modifications.
+Expérimentation : Vous pouvez expérimenter librement sans craindre de perturber le projet original.
+Inconvénients:
+Maintenance: Vous devez synchroniser manuellement votre fork avec le dépôt original pour rester à jour avec les dernières modifications.
+Duplication: Créer des forks peut entraîner une duplication du travail, surtout si plusieurs contributeurs travaillent sur les mêmes problèmes ou fonctionnalités.
+En résumé
+Cloner est idéal pour obtenir une copie locale pour le travail individuel, les tests, et les modifications locales sans intention immédiate de contribuer directement.
+Forker est idéal pour développer des fonctionnalités, corriger des bogues, et contribuer à des projets open-source en utilisant des pull requests. Forker offre une plus grande autonomie et la possibilité de proposer des modifications au projet original de manière structurée.
+Le choix entre cloner et forker dépend de votre objectif : cloner pour une copie locale et un travail individuel, forker pour la contribution et la collaboration.
+
+
+2)  Quelles sont les 2 commandes à exécuter sur un fichier dans un projet git avant de l’envoyer sur un dépôt distant ?
+
+Avant d'envoyer un fichier dans un projet Git sur un dépôt distant, vous devez généralement exécuter deux commandes principales : git add et git commit.
+Commande 1 : git add
+Cette commande est utilisée pour ajouter des modifications de fichiers à l'index (ou "staging area") de Git. Cela signifie que vous indiquez à Git que vous souhaitez inclure ces modifications dans le prochain commit.
+git add <fichier> 
+Pour ajouter un fichier spécifique : git add fichier.txt
+Pour ajouter tous les fichiers modifiés dans le répertoire actuel et ses sous-répertoires : git add. 
+Pour ajouter un ensemble de fichiers : git add fichier1.txt fichier2.txt
+Commande 2 : git commit
+Cette commande est utilisée pour enregistrer les modifications ajoutées dans l'index avec un message de commit qui décrit ces changements. Cela crée un snapshot de votre projet à ce moment-là.
+git commit –m "Message de commit" 
+Le message de commit doit être clair et concis, décrivant les modifications apportées. Par exemple : git commit -m "Ajout de la fonctionnalité de connexion utilisateur"
+
+ 
+3)  Quelle commande qu’on doit obligatoirement exécuter après avoir créé un projet git en local pour que ce projet soit reconnu en tant qu’un projet git ?
+      
+Pour qu'un projet soit reconnu en tant que projet Git après l'avoir créé en local, vous devez initialiser un dépôt Git dans ce projet. La commande à exécuter est :
+git init 
+Détails de la commande git init
+Cette commande crée un nouveau dépôt Git vide dans le répertoire actuel. Elle initialise les répertoires et fichiers nécessaires pour que Git puisse suivre les changements dans ce projet.
+
+
+4)  Un fichier dans un projet git est connu dans combien état ? Citez-les.
+       Untracked (Non suivi) :
+Le fichier n'est pas suivi par Git. Il n'existe pas encore dans l'index et n'a jamais été commité.
+Vous pouvez ajouter ce fichier à l'index en utilisant la commande git add.
+Unmodified (Non modifié) :
+Le fichier est suivi par Git et correspond exactement à la dernière version committée. Il n'a pas été modifié depuis le dernier commit.
+Si vous modifiez ce fichier, il passera à l'état "Modified".
+Modified (Modifié) :
+Le fichier a été modifié depuis la dernière version committée, mais les modifications n'ont pas encore été ajoutées à l'index (staging area).
+Vous pouvez ajouter les modifications à l'index en utilisant la commande git add.
+Staged (Indexé) :
+Le fichier est dans l'index et est prêt à être commité. Les modifications ont été ajoutées à l'index en utilisant la commande git add.
+Lorsque vous commitez, les fichiers dans l'état "Staged" seront enregistrés dans le prochain commit.
+5)  Créer une branche dans le projet contenant un fichier .txt dans lequel vous allez répondre à ces questions. Envoyer cette branche sur le dépôt distant sans lui fusionner avec la branche principale.
+
+
+
+	Demonstration des 6 étapes :
+     
+
+
+ 
+
+ 
+ 
+
+
